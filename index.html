@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+    <main>
+        <div class="title">
+            <h1>SPLI</h1>
+            <h1>TTER</h1>
+        </div>
+
+        <form id="formBills">
+            <div class="wrapper">
+                <div class="billClass">
+                    <label class="billLabel">Bill</label>
+                    <input type="text" placeholder="0" name="bill" class="billInput">
+                </div>
+        
+                <div id="tipsId">
+                    <label class="tipsLabel">Select Tip %</label>
+                    <div class="buttonsWrapper">
+                        <button name="5Button" type="button" value="5" class="buttonWidth">5%</button>
+                        <button name="10Button" type="button" value="10" class="buttonWidth">10%</button>
+                        <button name="15Button" type="button" value="15" class="buttonWidth">15%</button>
+                        <button name="25Button" type="button" value="25" class="buttonWidth">25%</button>
+                        <button name="50Button" type="button" value="50" class="buttonWidth">50%</button>
+                        <input type="text" placeholder="Custom" name="custom" class="buttonWidth customClass">
+                    </div>
+                </div>
+        
+                <div class="peopleClass">
+                    <label class="peopleLabel">Number of People</label>
+                    <span class="hidden" id="spanError">Can't be zero</span>
+                    <input placeholder="0" name="people" class="peopleInput">
+                </div>
+            </div>
+            
+            <div id="results">
+                <div class="resultsFlex">
+                    <div>
+                        <h2>Tip Amount</h2>
+                        <span class="perPerson">/ person</span>
+                    </div>
+                    <span class="resultAmount">$0.00</span>
+                </div>
+                <div class="resultsFlex">
+                    <div>
+                        <h2>Total</h2>
+                        <span class="perPerson">/ person</span>
+                    </div>
+                    <span class="resultAmount">$0.00</span>
+                </div>
+                <div class="resetWrapper">
+                    <button type="reset" class="resetButton">RESET</button>
+                </div>
+            </div>
+            <!--<button type="button" id="teste">Testeee</button>-->
+        </form>
+        
+    </main>
+
+    <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a><br>
+        Coded by <a href="https://tailshu3hu3.github.io" target="_blank">TailsHu3Hu3</a>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: hsl(172, 67%, 45%);
+    --secondary-color: hsl(189, 41%, 97%);
+    --label-color: hsl(186, 14%, 43%);
+    --result-person: hsl(184, 14%, 56%);
+    --result-background-color: hsl(183, 100%, 15%);
+    --result-button: hsl(183, 80%, 24%);
+    --background: hsl(185, 41%, 84%);
+    --box-background: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "Space Mono", monospace;
+    background-color: var(--background);
+}
+
+.title {
+    position: relative;
+    top: -50px;
+    font-size: 10px;
+    letter-spacing: 10px;
+    color: var(--result-background-color);
+}
+
+main {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/****************
+*      BOX      *
+****************/
+#formBills {
+    background-color: var(--box-background);
+    display: flex;
+    flex-flow: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 10px;
+    width: 800px;
+    border-radius: 20px;
+}
+
+.wrapper {
+    width: 45%;
+}
+
+
+/****************
+*     INPUTS    *
+****************/
+
+#tipsId, .billClass {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+label {
+    display:block;
+    text-align: left;
+    color: var(--label-color);
+}
+input {
+    text-align: right;
+    background-color: var(--secondary-color) !important;
+    color: var(--result-background-color) !important;
+    outline: none;
+}
+
+.billLabel, .tipsLabel, .peopleLabel {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.billInput, .peopleInput{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding-right: 10px;
+    font-size: 24px;
+    font-family: "Space Mono", monospace;
+    border-style: none;
+}
+.customClass   {
+    text-align: center;
+    font-size: 20px !important;
+}
+
+.billInput {
+    background-image: url(../images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left;
+    background-size: 12px;
+    padding-left: 14px;
+    background-origin: content-box;
+}
+.peopleInput {
+    background-image: url(../images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left;
+    background-size: 12px;
+    padding-left: 14px;
+    background-origin: content-box;
+}
+
+.peopleClass {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttonsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 90px;
+}
+
+.buttonWidth {
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+    background-color: var(--result-background-color);
+    color: var(--secondary-color);
+}
+
+/****************
+*    RESULTS    *
+****************/
+#results {
+    background-color: var(--result-background-color);
+    width: 45%;
+    height: 100%;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.resultsFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 15px 30px;
+}
+
+.resetWrapper {
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+h2 {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+.perPerson {
+    font-size: 12px;
+    color: var(--result-person);
+}
+.resultAmount {
+    font-size: 32px;
+    color: var(--primary-color)
+}
+
+.resetButton {
+    width: 90%;
+    height: 45px;
+    font-size: 24px;
+    font-family: "Space Mono", monospace;
+    border-radius: 5px;
+    border-style: none;
+    background-color: var(--result-button);
+    color: var(--result-background-color);
+    outline: none;
+}
+
+/****************
+*     FOOTER    *
+****************/
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+a {
+    color: var(--result-background-color);
+    text-decoration: none;
+}
+
+a:last-of-type {
+    color: #3c065e;
+}
+
+/****************
+*     HOVERS    *
+****************/
+
+input:hover {
+    border-style: solid;
+    border-color: var(--primary-color);
+    outline-color: var(--primary-color);
+    transition-duration: 50ms;
+}
+
+.buttonWidth:hover {
+    background-color: var(--primary-color);
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+.resetButton:hover {
+    background-color: var(--primary-color);
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--primary-color);
+    transition-duration: 400ms;
+}
+
+a:last-of-type:hover {
+    color: #7805c0;
+    transition-duration: 400ms;
+}
+
+/****************
+*     MEDIA     *
+****************/
+
+@media (max-width: 800px) and (min-width: 700px) {
+    #formBills {
+        width: 700px;
+    }
+    .resultAmount {
+        font-size: 30px;
+    }
+
+    .resetWrapper {
+        height: 80%;
+    }
+    h2 {
+        font-size: 12px;
+    }
+
+    .perPerson {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 699px) {
+    main {
+        height: auto;
+    }
+
+    .title {
+        margin-top: 30px;
+        top: 0;
+    }
+
+    #formBills {
+        width: 350px;
+        flex-flow: column;
+        margin-top: 30px;
+        margin-bottom: 100px;
+        padding: 20px 5px 30px 5px;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .buttonWidth {
+        width: 47%
+    }
+
+    .buttonsWrapper {
+        height: 150px;
+        flex-direction: column;
+    }
+
+    .peopleClass {
+        padding-bottom: 30px;
+    }
+
+    #results {
+        width: 90%;
+        padding-bottom: 20px;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .resultsFlex {
+        padding: 10px 15px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+    .perPerson {
+        font-size: 12px;
+    }
+
+    .resultAmount {
+        font-size: 30px;
+    }
+
+    .resetButton {
+        width: 100%;
+    }
+
+    .resetWrapper {
+        padding: 20px 15px 0 15px;
+    }
+}
+
+/****************
+*     ERRORS    *
+****************/
+
+.hidden {
+    display: none;
+}
+.error {
+    color: red;
+    display: inline-block;
+    font-size: 15px;
+}
+.errorBorder {
+    border-color: red;
+    border-style: solid;
+}
