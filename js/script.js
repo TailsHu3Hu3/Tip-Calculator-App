@@ -15,12 +15,9 @@ let currentNumber = ''
 
 
 function calcButton() {
-    console.log(currentNumber)
     let pFive = parseInt(billInput.value) / 100
     let pCalc = pFive * currentNumber
     let pResult = pCalc + parseInt(billInput.value)
-    console.log(pCalc)
-    console.log(pResult)
     
     if (numberOfPeople >= 1, pFive >= 1, pCalc >= 1) {
         let tipAmount = pCalc / parseInt(numberOfPeople.value)
