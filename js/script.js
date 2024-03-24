@@ -97,16 +97,3 @@ button15.addEventListener('click', changeValue15)
 button25.addEventListener('click', changeValue25)
 button50.addEventListener('click', changeValue50)
 customTip.addEventListener('blur', changeValueCustom)
-
-
-/*
-const teste = document.querySelector('#teste')
-function mostrarBillInput() {
-    console.log(billInput.value)
-}
-
-function mostrarCurrentNumber(){
-    console.log(currentNumber)
-}
-teste.addEventListener('click', mostrarCurrentNumber)
-billInput.addEventListener('blur', mostrarBillInput)*/
